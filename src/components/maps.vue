@@ -46,6 +46,7 @@
 <script>
 
     export default {
+        name: 'maps',
         data() {
             return {
                 markers: [],
@@ -81,6 +82,7 @@
                         if (this.markers[iterator].position.lat == this.place.geometry.location.lat() && this.markers[iterator].position.lng == this.place.geometry.location.lng()){
                             this.markers.splice(iterator, 1)
                             this.place = null;
+                            break;
                         }
 
                     }
